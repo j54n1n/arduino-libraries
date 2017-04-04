@@ -1,10 +1,10 @@
-#ifndef __INC_FASTPIN_ARM_SAM_H
-#define __INC_FASTPIN_ARM_SAM_H
+#ifndef __INC_FASTPIN_PLATFORM_ARM_SAM_H
+#define __INC_FASTPIN_PLATFORM_ARM_SAM_H
 
-FASTLED_NAMESPACE_BEGIN
+FASTPIN_NAMESPACE_BEGIN
 
-#if defined(FASTLED_FORCE_SOFTWARE_PINS)
-#warning "Software pin support forced, pin access will be sloightly slower."
+#if defined(FASTPIN_FORCE_SOFTWARE_PINS)
+#warning "Software pin support forced, pin access will be slightly slower."
 #define NO_HARDWARE_PIN_SUPPORT
 #undef HAS_HARDWARE_PIN_SUPPORT
 
@@ -114,9 +114,9 @@ _DEFPIN_ARM( 20, 0,  6); _DEFPIN_ARM( 21, 0,  7);
 
 
 
-#endif // FASTLED_FORCE_SOFTWARE_PINS
+#endif // FASTPIN_FORCE_SOFTWARE_PINS
 
-FASTLED_NAMESPACE_END
+FASTPIN_NAMESPACE_END
 
 
-#endif // __INC_FASTPIN_ARM_SAM_H
+#endif // __INC_FASTPIN_PLATFORM_ARM_SAM_H
