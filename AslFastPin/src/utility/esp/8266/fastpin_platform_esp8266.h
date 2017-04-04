@@ -1,14 +1,14 @@
 #pragma once
 
-FASTLED_NAMESPACE_BEGIN
+FASTPIN_NAMESPACE_BEGIN
 
-struct FASTLED_ESP_IO {
+struct FASTPIN_ESP_IO {
   volatile uint32_t _GPO;
   volatile uint32_t _GPOS;
   volatile uint32_t _GPOC;
 };
 
-#define _GPB (*(FASTLED_ESP_IO*)(0x60000000+(0x300)))
+#define _GPB (*(FASTPIN_ESP_IO*)(0x60000000+(0x300)))
 
 
 template<uint8_t PIN, uint32_t MASK> class _ESPPIN {
@@ -45,7 +45,7 @@ public:
 #define _DEFPIN_ESP8266(PIN, REAL_PIN) template<> class FastPin<PIN> : public _ESPPIN<REAL_PIN, (1<<(REAL_PIN & 0xFF))> {};
 
 
-#ifdef FASTLED_ESP8266_RAW_PIN_ORDER
+#ifdef FASTPIN_ESP8266_RAW_PIN_ORDER
 #define MAX_PIN 16
 _DEFPIN_ESP8266(0,0); _DEFPIN_ESP8266(1,1); _DEFPIN_ESP8266(2,2); _DEFPIN_ESP8266(3,3);
 _DEFPIN_ESP8266(4,4); _DEFPIN_ESP8266(5,5);
@@ -58,7 +58,7 @@ _DEFPIN_ESP8266(12,12); _DEFPIN_ESP8266(13,13); _DEFPIN_ESP8266(14,14); _DEFPIN_
 _DEFPIN_ESP8266(16,16);
 
 #define PORTA_FIRST_PIN 12
-#elif defined(FASTLED_ESP8266_D1_PIN_ORDER)
+#elif defined(FASTPIN_ESP8266_D1_PIN_ORDER)
 #define MAX_PIN 15
 _DEFPIN_ESP8266(0,3);
 _DEFPIN_ESP8266(1,1);
@@ -79,7 +79,7 @@ _DEFPIN_ESP8266(15,5);
 
 #define PORTA_FIRST_PIN 12
 
-#else // if defined(FASTLED_ESP8266_NODEMCU_PIN_ORDER)
+#else // if defined(FASTPIN_ESP8266_NODEMCU_PIN_ORDER)
 #define MAX_PIN 10
 
 // This seems to be the standard Dxx pin mapping on most of the esp boards that i've found
@@ -98,4 +98,4 @@ _DEFPIN_ESP8266(8,15); _DEFPIN_ESP8266(9,3); _DEFPIN_ESP8266(10,1);
 
 #define HAS_HARDWARE_PIN_SUPPORT
 
-#define FASTLED_NAMESPACE_END
+FASTPIN_NAMESPACE_END
