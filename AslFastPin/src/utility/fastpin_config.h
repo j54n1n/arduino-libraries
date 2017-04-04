@@ -11,7 +11,4 @@
 // methods for pin access vs. direct hardware port access
 // #define FASTPIN_FORCE_SOFTWARE_PINS
 
-#endif
-
-
 #endif // __INC_FASTPIN_CONFIG_H
