@@ -1,5 +1,7 @@
-#ifndef __FASTPIN_ARM_NRF51_H
-#define __FASTPIN_ARM_NRF51_H
+#ifndef __INC_FASTPIN_PLATFORM_ARM_NRF51_H
+#define __INC_FASTPIN_PLATFORM_ARM_NRF51_H
+
+FASTPIN_NAMESPACE_BEGIN
 
 #if defined(NRF51)
 /// Template definition for teensy 3.0 style ARM pins, providing direct access to the various GPIO registers.  Note that this
@@ -116,4 +118,6 @@ _DEFPIN_ARM(28); _DEFPIN_ARM(29); _DEFPIN_ARM(30); _DEFPIN_ARM(31);
 
 #endif
 
-#endif
+FASTPIN_NAMESPACE_END
+
+#endif // __INC_FASTPIN_PLATFORM_ARM_NRF51_H

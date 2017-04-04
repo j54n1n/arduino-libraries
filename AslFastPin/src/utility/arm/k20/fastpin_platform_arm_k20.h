@@ -1,9 +1,9 @@
-#ifndef __FASTPIN_ARM_K20_H
-#define __FASTPIN_ARM_K20_H
+#ifndef __INC_FASTPIN_PLATFORM_ARM_K20_H
+#define __INC_FASTPIN_PLATFORM_ARM_K20_H
 
-FASTLED_NAMESPACE_BEGIN
+FASTPIN_NAMESPACE_BEGIN
 
-#if defined(FASTLED_FORCE_SOFTWARE_PINS)
+#if defined(FASTPIN_FORCE_SOFTWARE_PINS)
 #warning "Software pin support forced, pin access will be sloightly slower."
 #define NO_HARDWARE_PIN_SUPPORT
 #undef HAS_HARDWARE_PIN_SUPPORT
@@ -86,7 +86,7 @@ public:
  																			_R(GPIO ## L ## _PTOR), _R(GPIO ## L ## _PDIR), _R(GPIO ## L ## _PDDR)> {};
 
 // Actual pin definitions
-#if defined(FASTLED_TEENSY3) && defined(CORE_TEENSY)
+#if defined(FASTPIN_TEENSY3) && defined(CORE_TEENSY)
 
 _IO32(A); _IO32(B); _IO32(C); _IO32(D); _IO32(E);
 
@@ -108,13 +108,13 @@ _DEFPIN_ARM(32, 18, B); _DEFPIN_ARM(33, 4, A);
 #define SPI2_DATA 7
 #define SPI2_CLOCK 14
 
-#define FASTLED_TEENSY3
+#define FASTPIN_TEENSY3
 #define ARM_HARDWARE_SPI
 #define HAS_HARDWARE_PIN_SUPPORT
 #endif
 
-#endif // FASTLED_FORCE_SOFTWARE_PINS
+#endif // FASTPIN_FORCE_SOFTWARE_PINS
 
-FASTLED_NAMESPACE_END
+FASTPIN_NAMESPACE_END
 
-#endif // __INC_FASTPIN_ARM_K20
+#endif // __INC_FASTPIN_PLATFORM_ARM_K20_H

@@ -2,8 +2,8 @@
 #define __INC_FASTPIN_SYSDEFS_ARM_D21_H
 
 
-#define FASTLED_ARM
-#define FASTLED_ARM_M0_PLUS
+#define FASTPIN_ARM
+#define FASTPIN_ARM_M0_PLUS
 
 
 #endif // __INC_FASTPIN_SYSDEFS_ARM_D21_H

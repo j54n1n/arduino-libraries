@@ -1,9 +1,9 @@
-#ifndef __FASTPIN_ARM_KL26_H
-#define __FASTPIN_ARM_KL26_H
+#ifndef __INC_FASTPIN_ARM_KL26_H
+#define __INC_FASTPIN_ARM_KL26_H
 
-FASTLED_NAMESPACE_BEGIN
+FASTPIN_NAMESPACE_BEGIN
 
-#if defined(FASTLED_FORCE_SOFTWARE_PINS)
+#if defined(FASTPIN_FORCE_SOFTWARE_PINS)
 #warning "Software pin support forced, pin access will be sloightly slower."
 #define NO_HARDWARE_PIN_SUPPORT
 #undef HAS_HARDWARE_PIN_SUPPORT
@@ -58,7 +58,7 @@ _R(GPIO ## L ## _PTOR), _R(FGPIO ## L ## _PDIR), _R(FGPIO ## L ## _PDDR)> {}; \
 _R(GPIO ## L ## _PTOR), _R(GPIO ## L ## _PDIR), _R(GPIO ## L ## _PDDR)> {}; */
 
 // Actual pin definitions
-#if defined(FASTLED_TEENSYLC) && defined(CORE_TEENSY)
+#if defined(FASTPIN_TEENSYLC) && defined(CORE_TEENSY)
 
 _IO32(A); _IO32(B); _IO32(C); _IO32(D); _IO32(E);
 
@@ -81,8 +81,8 @@ _DEFPIN_ARM(24, 20, E); _DEFPIN_ARM(25, 21, E); _DEFPIN_ARM(26, 30, E);
 #define HAS_HARDWARE_PIN_SUPPORT
 #endif
 
-#endif // FASTLED_FORCE_SOFTWARE_PINS
+#endif // FASTPIN_FORCE_SOFTWARE_PINS
 
-FASTLED_NAMESPACE_END
+FASTPIN_NAMESPACE_END
 
-#endif // __INC_FASTPIN_ARM_K20
+#endif // __INC_FASTPIN_ARM_KL26_H
