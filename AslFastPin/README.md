@@ -9,7 +9,7 @@ How quickly can you get up and running with the library?  Here's a simple blink 
 	using namespace asl;
 	void setup() { FastPin<13>::setOutput(); }
 	void loop() {
-        FastPin<13>::hi(); delay(500);
+		FastPin<13>::hi(); delay(500);
 		FastPin<13>::lo(); delay(500);
 	}
 
