@@ -1,8 +1,18 @@
-IMPORTANT NOTE: For AVR based systems, avr-gcc 4.8.x is supported and tested.  This means Arduino 1.6.5 and later.
+AslFastPin
+==========
 
+## Simple example
 
-FastLED 3.1
-===========
+How quickly can you get up and running with the library?  Here's a simple blink program:
+
+	#include <AslFastPin.h>
+	using namespace asl;
+	void setup() { FastPin<13>::setOutput(); }
+	void loop() {
+        FastPin<13>::hi(); delay(500);
+		FastPin<13>::lo(); delay(500);
+	}
+
 
 ## Supported platforms
 
@@ -18,3 +28,5 @@ Right now the library is supported on a variety of arduino compatable platforms.
 * Arduino Zero
 * ESP8266 using the arduino board definitions from http://arduino.esp8266.com/stable/package_esp8266com_index.json - please be sure to also read https://github.com/FastLED/FastLED/wiki/ESP8266-notes for information specific to the 8266.
 * The wino board - http://wino-board.com
+
+IMPORTANT NOTE: For AVR based systems, avr-gcc 4.8.x is supported and tested.  This means Arduino 1.6.5 and later.
