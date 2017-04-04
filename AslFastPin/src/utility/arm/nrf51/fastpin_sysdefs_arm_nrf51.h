@@ -16,4 +16,9 @@
 #include "nrf51.h"
 #include "core_cm0.h"
 
+typedef volatile uint32_t RoReg;
+typedef volatile uint32_t RwReg;
+typedef uint32_t prog_uint32_t;
+typedef uint8_t boolean;
+
 #endif // __INC_FASTPIN_SYSDEFS_ARM_NRF51
