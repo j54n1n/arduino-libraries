@@ -1,7 +1,7 @@
 # arduino-libraries
 Reusable generic libraries for Arduino projects. The libraries are prefixed with
-the *asl* namespace (short for Arduino Standard Library) to avoid name clashes
-with existing libraries.
+the *asl* namespace (short for Arduino&nbsp;Standard&nbsp;Library) to avoid name
+clashes with existing libraries.
 
 This set of libraries require at least
 [Arduino IDE](https://www.arduino.cc/en/Main/Software) v1.6.8, where v1.8.1 or
