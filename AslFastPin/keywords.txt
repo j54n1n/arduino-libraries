@@ -13,18 +13,18 @@ FastPin	KEYWORD1
 #######################################
 
 # FastPin methods
-fastset KEYWORD2
-hi  KEYWORD2
-hival   KEYWORD2
-lo  KEYWORD2
-loval   KEYWORD2
-mask    KEYWORD2
-port    KEYWORD2
-set KEYWORD2
-setInput    KEYWORD2
-setOutput   KEYWORD2
-strobe  KEYWORD2
-toggle  KEYWORD2
+fastset	KEYWORD2
+hi	KEYWORD2
+hival	KEYWORD2
+lo	KEYWORD2
+loval	KEYWORD2
+mask	KEYWORD2
+port	KEYWORD2
+set	KEYWORD2
+setInput	KEYWORD2
+setOutput	KEYWORD2
+strobe	KEYWORD2
+toggle	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
