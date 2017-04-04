@@ -1,17 +1,17 @@
-#ifndef __INC_FASTPIN_H
-#define __INC_FASTPIN_H
+#ifndef __INC_FASTPIN_BASE_H
+#define __INC_FASTPIN_BASE_H
 
-#include "FastLED.h"
+#include "AslFastPin.h"
 
-#include "led_sysdefs.h"
+#include "fastpin_sysdefs.h"
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wignored-qualifiers"
 
-///@file fastpin.h
-/// Class base definitions for defining fast pin access
+///@file fastpin_base.h
+/// Class base definitions for defining fast pin access.
 
-FASTLED_NAMESPACE_BEGIN
+FASTPIN_NAMESPACE_BEGIN
 
 #define NO_PIN 255
 
@@ -28,7 +28,7 @@ public:
 	virtual bool isSelected() = 0;
 };
 
-#if !defined(FASTLED_NO_PINMAP)
+#if !defined(FASTPIN_NO_PINMAP)
 
 class Pin : public Selectable {
 	volatile RwReg *mPort;
@@ -156,13 +156,13 @@ public:
 ///
 /// Note that these classes are all static functions.  So the proper usage is Pin<13>::hi(); or such.  Instantiating objects is not recommended,
 /// as passing Pin objects around will likely -not- have the effect you're expecting.
-#ifdef FASTLED_FORCE_SOFTWARE_PINS
+#ifdef FASTPIN_FORCE_SOFTWARE_PINS
 template<uint8_t PIN> class FastPin {
 	static RwReg sPinMask;
 	static volatile RwReg *sPort;
 	static volatile RoReg *sInPort;
 	static void _init() {
-#if !defined(FASTLED_NO_PINMAP)
+#if !defined(FASTPIN_NO_PINMAP)
 		sPinMask = digitalPinToBitMask(PIN);
 		sPort = portOutputRegister(digitalPinToPort(PIN));
 		sInPort = portInputRegister(digitalPinToPort(PIN));
@@ -240,8 +240,8 @@ template<uint8_t PIN> class FastPinBB : public FastPin<PIN> {};
 typedef volatile uint32_t & reg32_t;
 typedef volatile uint32_t * ptr_reg32_t;
 
-FASTLED_NAMESPACE_END
+FASTPIN_NAMESPACE_END
 
 #pragma GCC diagnostic pop
 
-#endif // __INC_FASTPIN_H
+#endif // __INC_FASTPIN_BASE_H
