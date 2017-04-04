@@ -1,4 +1,4 @@
-#include <AnalogMultiplexer.h>
+#include <AslAnalogMultiplexer.h>
 
 // Selected Arduino pins.
 enum {
@@ -9,6 +9,8 @@ enum {
 	PIN_S3 = 6, // Channel selector pin 3.
 	PIN_IO = A0 // Use here a pin that can work in analog & digital modes.
 };
+
+using namespace asl;
 
 AMxx4067 mux{ PIN_EN, PIN_S0, PIN_S1, PIN_S2, PIN_S3 }; // 16:1 Multiplexer.
 // Other possible types are:

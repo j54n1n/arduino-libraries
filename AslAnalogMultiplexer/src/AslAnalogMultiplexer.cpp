@@ -24,7 +24,9 @@
  * THE SOFTWARE.
  */
 
-#include "AnalogMultiplexer.h"
+#include "AslAnalogMultiplexer.h"
+
+namespace asl {
 
 AnalogMultiplexer::AnalogMultiplexer(uint8_t pinEnable) {
 	_pinEnable = pinEnable;
@@ -73,4 +75,6 @@ int AnalogMultiplexer::analogRead(uint8_t channel) {
 		return /*Arduino*/::analogRead(_pinCommon);
 	}
 	return 0;
+}
+
 }

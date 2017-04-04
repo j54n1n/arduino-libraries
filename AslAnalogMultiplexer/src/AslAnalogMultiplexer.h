@@ -24,10 +24,12 @@
  * THE SOFTWARE.
  */
 
-#ifndef ANALOG_MULTIPLEXER_H
-#define ANALOG_MULTIPLEXER_H
+#ifndef ASL_ANALOG_MULTIPLEXER_H
+#define ASL_ANALOG_MULTIPLEXER_H
 
 #include <Arduino.h>
+
+namespace asl {
 
 /// <summary>CMOS Logic Analog Multiplexer and Demultiplexer.</summary>
 class AnalogMultiplexer {
@@ -164,4 +166,6 @@ using AMxx4053 = AMxx40xx<uint8_t>;
 /// </summary>
 using AMxx4067 = AMxx40xx<uint8_t, uint8_t, uint8_t, uint8_t>;
 
-#endif //ANALOG_MULTIPLEXER
+}
+
+#endif //ASL_ANALOG_MULTIPLEXER_H

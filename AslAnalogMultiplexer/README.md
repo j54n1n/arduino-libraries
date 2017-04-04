@@ -4,7 +4,7 @@ A library to interface with analog multiplexers. Supports 4051, 4052, 4053, and
 
 ## How to use
 ```
-#include <AnalogMultiplexer.h>
+#include <AslAnalogMultiplexer.h>
 
 enum {
 	PIN_EN = 2, // The enable pin of the multiplexer or NOT_A_PIN.
@@ -13,6 +13,8 @@ enum {
 	PIN_S2 = 5, // Channel selector pin 2.
 	PIN_IO = A0 // Use here a pin that can work in analog & digital modes.
 };
+
+using namespace asl;
 
 AMxx4051 mux{ PIN_EN, PIN_S0, PIN_S1, PIN_S2 }; // 8:1 Multiplexer.
 
